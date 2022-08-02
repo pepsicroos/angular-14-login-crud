@@ -1,0 +1,263 @@
+<p-toolbar styleClass="mb-4">
+    <ng-template pTemplate="left">
+        <button pButton pRipple label="New" icon="pi pi-plus" class="p-button-success mr-2" routerLink="/datos/create" ></button>
+        
+    </ng-template>
+</p-toolbar>
+<br>
+<br>
+
+
+<p-table  [value]="allDatos" scrollDirection="both" [scrollable]="true"  >
+  <ng-template pTemplate="headergrouped">
+      <tr>
+          <th rowspan="3" style="width:150px" pFrozenColumn>Building</th>
+          <th rowspan="3" style="width:150px" pFrozenColumn>Worcell Manager</th>
+          <th rowspan="3" style="width:150px" pFrozenColumn>Sector</th>
+          <th rowspan="3" style="width:150px" pFrozenColumn>Customer</th>
+      </tr>
+      <tr>
+          <th colspan="7" style="text-align: center; border-left: 1px solid #dee2e6;">Lunes</th>
+          <th colspan="7" style="text-align: center; border-left: 1px solid #dee2e6; " >Martes</th>
+          <th colspan="7" style="text-align: center; border-left: 1px solid #dee2e6;" >Miercoles</th>
+          <th colspan="7" style="text-align: center; border-left: 1px solid #dee2e6;" >Jueves</th>
+          <th colspan="7" style="text-align: center; border-left: 1px solid #dee2e6;" >Viernes</th>
+          <th colspan="7" style="text-align: center; border-left: 1px solid #dee2e6;" >Sabado</th>
+          <th colspan="7" style="text-align: center; border-left: 1px solid #dee2e6;" >Domingo</th>
+          <th colspan="10" style="text-align: center; border-left: 1px solid #dee2e6;" >Semana</th>
+          <th colspan="1" style="width:150px; border-left: 1px solid #dee2e6;" ></th>
+
+      </tr>
+
+      <tr>
+          <th style="width:150px; border-left: 1px solid #dee2e6;">Plan</th>
+          <th style="width:150px; border-left: 1px solid #dee2e6;">Actual</th>
+          <th style="width:150px; border-left: 1px solid #dee2e6;">Delta</th>
+          <th style="width:150px; border-left: 1px solid #dee2e6;">% Vol</th>
+          <th style="width:150px; border-left: 1px solid #dee2e6;">Lines Plan</th>
+          <th style="width:150px; border-left: 1px solid #dee2e6;">Lines Actual</th>
+          <th style="width:150px; border-left: 1px solid #dee2e6;">%Lin</th>
+
+          <th style="width:150px; border-left: 1px solid #dee2e6;">Plan</th>
+          <th style="width:150px; border-left: 1px solid #dee2e6;">Actual</th>
+          <th style="width:150px; border-left: 1px solid #dee2e6;">Delta</th>
+          <th style="width:150px; border-left: 1px solid #dee2e6;">% Vol</th>
+          <th style="width:150px; border-left: 1px solid #dee2e6;">Lines Plan</th>
+          <th style="width:150px; border-left: 1px solid #dee2e6;">Lines Actual</th>
+          <th style="width:150px; border-left: 1px solid #dee2e6;">%Lin</th>
+
+          <th style="width:150px; border-left: 1px solid #dee2e6;">Plan</th>
+          <th style="width:150px; border-left: 1px solid #dee2e6;">Actual</th>
+          <th style="width:150px; border-left: 1px solid #dee2e6;">Delta</th>
+          <th style="width:150px; border-left: 1px solid #dee2e6;">% Vol</th>
+          <th style="width:150px; border-left: 1px solid #dee2e6;">Lines Plan</th>
+          <th style="width:150px; border-left: 1px solid #dee2e6;">Lines Actual</th>
+          <th style="width:150px; border-left: 1px solid #dee2e6;">%Lin</th>
+
+          <th style="width:150px; border-left: 1px solid #dee2e6;">Plan</th>
+          <th style="width:150px; border-left: 1px solid #dee2e6;">Actual</th>
+          <th style="width:150px; border-left: 1px solid #dee2e6;">Delta</th>
+          <th style="width:150px; border-left: 1px solid #dee2e6;">% Vol</th>
+          <th style="width:150px; border-left: 1px solid #dee2e6;">Lines Plan</th>
+          <th style="width:150px; border-left: 1px solid #dee2e6;">Lines Actual</th>
+          <th style="width:150px; border-left: 1px solid #dee2e6;">%Lin</th>
+
+          <th style="width:150px; border-left: 1px solid #dee2e6;">Plan</th>
+          <th style="width:150px; border-left: 1px solid #dee2e6;">Actual</th>
+          <th style="width:150px; border-left: 1px solid #dee2e6;">Delta</th>
+          <th style="width:150px; border-left: 1px solid #dee2e6;">% Vol</th>
+          <th style="width:150px; border-left: 1px solid #dee2e6;">Lines Plan</th>
+          <th style="width:150px; border-left: 1px solid #dee2e6;">Lines Actual</th>
+          <th style="width:150px; border-left: 1px solid #dee2e6;">%Lin</th>
+
+          <th style="width:150px; border-left: 1px solid #dee2e6;">Plan</th>
+          <th style="width:150px; border-left: 1px solid #dee2e6;">Actual</th>
+          <th style="width:150px; border-left: 1px solid #dee2e6;">Delta</th>
+          <th style="width:150px; border-left: 1px solid #dee2e6;">% Vol</th>
+          <th style="width:150px; border-left: 1px solid #dee2e6;">Lines Plan</th>
+          <th style="width:150px; border-left: 1px solid #dee2e6;">Lines Actual</th>
+          <th style="width:150px; border-left: 1px solid #dee2e6;">%Lin</th>
+
+          <th style="width:150px; border-left: 1px solid #dee2e6;">Plan</th>
+          <th style="width:150px; border-left: 1px solid #dee2e6;">Actual</th>
+          <th style="width:150px; border-left: 1px solid #dee2e6;">Delta</th>
+          <th style="width:150px; border-left: 1px solid #dee2e6;">% Vol</th>
+          <th style="width:150px; border-left: 1px solid #dee2e6;">Lines Plan</th>
+          <th style="width:150px; border-left: 1px solid #dee2e6;">Lines Actual</th>
+          <th style="width:150px; border-left: 1px solid #dee2e6;" >%Lin</th>
+
+          <th style="width:150px; border-left: 1px solid #dee2e6;">Internal Commit-Vol</th>
+          <th style="width:150px; border-left: 1px solid #dee2e6;">Frozen Plan</th>
+          <th style="width:150px; border-left: 1px solid #dee2e6;">Actual</th>
+          <th style="width:150px; border-left: 1px solid #dee2e6;">Delta</th>
+          <th style="width:150px; border-left: 1px solid #dee2e6;">Plan %</th>
+          <th style="width:150px; border-left: 1px solid #dee2e6;">Internal Commit-Lines </th>
+          <th style="width:150px; border-left: 1px solid #dee2e6;" >Lines Actual</th>
+          <th style="width:150px; border-left: 1px solid #dee2e6;" >Internal Commit %</th>
+          <th style="width:150px; border-left: 1px solid #dee2e6;" >OTD %</th>
+          <th style="width:150px; border-left: 1px solid #dee2e6;" >Commit comments</th>
+
+
+          <th style="width:150px; border-left: 1px solid #dee2e6;"></th>
+      </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-item>
+      <tr>
+          <td pFrozenColumn style="width:150px">{{item.building}}</td>
+          <td pFrozenColumn style="width:150px">{{item.workcellmanager}}</td>
+          <td pFrozenColumn style="width:150px">{{item.Sector}}</td>
+          <td pFrozenColumn style="width:150px">{{item.id}}</td>
+          
+          <td style="width:150px">{{item.planl}}</td>
+          <td style="width:150px">{{item.actuall}}</td>
+          <td style="width:150px">{{item.deltal}}</td>
+          <td style="width:150px">{{item.voll}}</td>
+          <td style="width:150px">{{item.linesplanl }}</td>
+          <td style="width:150px">{{item.linesactuall }}</td>
+          <td style="width:150px">{{item.linl}}</td>
+
+          <td style="width:150px">{{item.planm}}</td>
+          <td style="width:150px">{{item.actualm}}</td>
+          <td style="width:150px">{{item.deltam}}</td>
+          <td style="width:150px">{{item.volm}}</td>
+          <td style="width:150px">{{item.linesplanm }}</td>
+          <td style="width:150px">{{item.linesactualm }}</td>
+          <td style="width:150px">{{item.linm}}</td>
+
+          <td style="width:150px">{{item.planmm}}</td>
+          <td style="width:150px">{{item.actualmm}}</td>
+          <td style="width:150px">{{item.deltamm}}</td>
+          <td style="width:150px">{{item.volmm}}</td>
+          <td style="width:150px">{{item.linesplanmm }}</td>
+          <td style="width:150px">{{item.linesactualmm }}</td>
+          <td style="width:150px">{{item.linmm}}</td>
+
+          <td style="width:150px">{{item.planj}}</td>
+          <td style="width:150px">{{item.actualj}}</td>
+          <td style="width:150px">{{item.deltaj}}</td>
+          <td style="width:150px">{{item.volj}}</td>
+          <td style="width:150px">{{item.linesplanj }}</td>
+          <td style="width:150px">{{item.linesactualj }}</td>
+          <td style="width:150px">{{item.linj}}</td>
+
+          <td style="width:150px">{{item.planv}}</td>
+          <td style="width:150px">{{item.actualv}}</td>
+          <td style="width:150px">{{item.deltav}}</td>
+          <td style="width:150px">{{item.volv}}</td>
+          <td style="width:150px">{{item.linesplanv}}</td>
+          <td style="width:150px">{{item.linesactualv }}</td>
+          <td style="width:150px">{{item.linv}}</td>
+
+          <td style="width:150px">{{item.plans}}</td>
+          <td style="width:150px">{{item.actuals}}</td>
+          <td style="width:150px">{{item.deltas}}</td>
+          <td style="width:150px">{{item.vols}}</td>
+          <td style="width:150px">{{item.linesplans }}</td>
+          <td style="width:150px">{{item.linesactuals }}</td>
+          <td style="width:150px">{{item.lins}}</td>
+
+          <td style="width:150px">{{item.pland}}</td>
+          <td style="width:150px">{{item.actuald}}</td>
+          <td style="width:150px">{{item.deltad}}</td>
+          <td style="width:150px">{{item.vold}}</td>
+          <td style="width:150px">{{item.linespland }}</td>
+          <td style="width:150px">{{item.linesactuald }}</td>
+          <td style="width:150px">{{item.lind}}</td>
+
+          
+
+         
+
+          <td style="width:150px">{{item.internalcommitvol}}</td>
+          <td style="width:150px">{{item.frozenplan}}</td>
+          <td style="width:150px">{{item.actualw}}</td>
+          <td style="width:150px">{{item.deltaw }}</td>
+          <td style="width:150px">{{item.planw}}</td>
+          <td style="width:150px">{{item.internalcommitlines}}</td>
+          <td style="width:150px">{{item.linesactualw }}</td>
+          <td style="width:150px">{{item.internalcommit}}</td>
+          <td style="width:150px">{{item.otd}}</td>
+          <td style="width:150px">{{item.comments}}</td>
+          <td style="width:150px">
+            <button pButton pRipple icon="pi pi-pencil" [routerLink]="['/datos/edit', item.id]" class="p-button-rounded p-button-success mr-2" ></button>
+            <button pButton pRipple icon="pi pi-trash" (click)="openDeleteModal(item.id)" class="p-button-rounded p-button-warning"></button>
+        </td>
+      </tr>
+  </ng-template>
+  <ng-template pTemplate="footer">
+      
+  </ng-template>
+</p-table>
+
+<p-dialog [(visible)]="productDialog" [style]="{width: '450px'}" header="Product Details" [modal]="true" styleClass="p-fluid">
+    <ng-template pTemplate="content">
+        
+        <div class="field">
+            <label for="building">Building</label>
+            <p-dropdown [(ngModel)]="dato.building" inputId="Building" [options]="buildings" placeholder="Select" name="building">
+                <ng-template let-option pTemplate="item">
+                    <span [class]="'product-badge status-' + option.value">{{option.label}}</span>
+                </ng-template>
+            </p-dropdown>
+            
+        </div>
+
+        <div class="field">
+            <label for="workcellmanager">Work Cell Manager</label>
+            <p-dropdown [(ngModel)]="dato.workcellmanager" inputId="Work Cell Manager" [options]="worcells" placeholder="Select" name="workcellmanager">
+                <ng-template let-option pTemplate="item">
+                    <span [class]="'product-badge status-' + option.value">{{option.label}}</span>
+                </ng-template>
+            </p-dropdown>
+            
+        </div>
+
+        <div class="field">
+            <label for="Sector">Sector</label>
+            <p-dropdown [(ngModel)]="dato.Sector" inputId="Sector" [options]="Sectors" placeholder="Select" name="Sector">
+                <ng-template let-option pTemplate="item">
+                    <span [class]="'product-badge status-' + option.value">{{option.label}}</span>
+                </ng-template>
+            </p-dropdown>
+            
+        </div>
+
+        <div class="field">
+            <label for="id">Custumer</label>
+            <p-dropdown [(ngModel)]="dato.id" inputId="Building" [options]="costumers" placeholder="Select" name="id">
+                <ng-template let-option pTemplate="item">
+                    <span [class]="'product-badge status-' + option.value">{{option.label}}</span>
+                </ng-template>
+            </p-dropdown>
+            
+        </div>
+        
+    </ng-template>
+
+    <ng-template pTemplate="footer">
+        <button pButton pRipple label="Cancel" icon="pi pi-times" class="p-button-text" ></button>
+        <button pButton pRipple label="Update" icon="pi pi-check" class="p-button-text" (click)="update()" ></button>
+    </ng-template>
+</p-dialog>
+
+
+<!-- Modal -->
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Warning!</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Are you sure to delete the item?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-danger" (click)="delete()">Confirm Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+

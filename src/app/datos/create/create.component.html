@@ -1,0 +1,57 @@
+<p-card  [style]="{width: '450px'}" header="Product Details" styleClass="p-fluid">
+    <ng-template pTemplate="content">
+        
+        <div class="field">
+            <label for="building">Building</label>
+            <p-dropdown [(ngModel)]="datoForm.building" inputId="Building" [options]="buildings" placeholder="Select" name="building">
+                <ng-template let-option pTemplate="item">
+                    <span [class]="'product-badge status-' + option.value">{{option.label}}</span>
+                </ng-template>
+            </p-dropdown>
+            
+        </div>
+
+        <div class="field">
+            <label for="workcellmanager">Work Cell Manager</label>
+            <p-dropdown [(ngModel)]="datoForm.workcellmanager" inputId="Work Cell Manager" [options]="worcells" placeholder="Select" name="workcellmanager">
+                <ng-template let-option pTemplate="item">
+                    <span [class]="'product-badge status-' + option.value">{{option.label}}</span>
+                </ng-template>
+            </p-dropdown>
+            
+        </div>
+
+        <div class="field">
+            <label for="Sector">Sector</label>
+            <p-dropdown [(ngModel)]="datoForm.Sector" inputId="Sector" [options]="Sectors" placeholder="Select" name="Sector">
+                <ng-template let-option pTemplate="item">
+                    <span [class]="'product-badge status-' + option.value">{{option.label}}</span>
+                </ng-template>
+            </p-dropdown>
+            
+        </div>
+
+        <div class="field">
+            <label for="id">Customer</label>
+            <p-dropdown [(ngModel)]="datoForm.id" inputId="Building" [options]="costumers" placeholder="Select" name="id">
+                <ng-template let-option pTemplate="item">
+                    <span [class]="'product-badge status-' + option.value">{{option.label}}</span>
+                </ng-template>
+            </p-dropdown>
+            
+        </div>
+
+        <div class="field">
+            <label for="id">Semana</label>
+            <p-dropdown [options]="fecha" [(ngModel)]="selectedFecha" optionLabel="fecha"></p-dropdown>
+
+            
+        </div>
+        
+    </ng-template>
+
+    <ng-template pTemplate="footer">
+        <button pButton pRipple label="Cancel" icon="pi pi-times" class="p-button-text" ></button>
+        <button pButton pRipple label="Save" icon="pi pi-check" class="p-button-text" (click)="create()"></button>
+    </ng-template>
+</p-card>
